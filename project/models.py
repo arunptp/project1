@@ -14,4 +14,4 @@ class Recipe(db.Model):
         self.recipe_description = description
 
     def __repr__(self):
-        return f"Recipe('{self.id}', '{self.recipe_title}')"
+        return '<title {}'.format(self.name)
