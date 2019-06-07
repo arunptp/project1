@@ -14,7 +14,7 @@ from project import db
 #### config ####
 ################
 
-recipes_blueprint = Blueprint('recipes', __name__, template_folder='templates')
+recipes_blueprint = Blueprint('recipes', __name__)
 
 ##########################
 #### helper functions ####

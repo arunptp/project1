@@ -1,6 +1,8 @@
 from project import db
 from project.models import Recipe
 
+#Drop all tables
+db.drop_all()
 
 # create the database and the database table
 db.create_all()

@@ -36,6 +36,8 @@
             <li><a href="#">Lunch Recipes</a></li>
             <li><a href="#">Dinner Recipes</a></li>
             <li><a href="#">Dessert Recipes</a></li>
+            <li><a href="{{ url_for('recipes.add_recipe') }}">Add Recipe</a></li>
+            <li><a href="{{ url_for('users.register') }}">Register</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome!</a></li>
@@ -46,7 +48,7 @@
 
     <div class="container">
       <div class="content">
-        
+
         <!-- flash messages -->
         {% for error_message in get_flashed_messages(category_filter=["error"]) %}
         <div class="alert alert-danger alert-dismissible">{{ error_message }}</div>

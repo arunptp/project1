@@ -15,3 +15,17 @@ class Recipe(db.Model):
 
     def __repr__(self):
         return '<title {}'.format(self.name)
+
+class User(db.Model):
+
+    __tablename__ = "users"
+    id = db.Column(db.Integer, primary_key = True)
+    email = db.Column(db.String, unique =True, nullable = False)
+    password_plaintext = db.Column(db.String, nullable = False)
+
+    def __init__(self, email, password_plaintext):
+        self.email = email
+        self.password_plaintext = password_plaintext # To be hashed later
+
+    def __repr__(self):
+        return f"User{self.email}" # fstrings after python 3.6
