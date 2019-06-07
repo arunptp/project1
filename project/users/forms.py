@@ -9,3 +9,10 @@ class RegisterForm(Form):
                             validators =[DataRequired(), Length(min=6, max=40)])
     confirm = PasswordField('Confirm Password',
                             validators =[DataRequired(), EqualTo('password')])
+
+
+class LoginForm(Form):
+    email = StringField('Email',
+                        validators = [DataRequired(), Email(), Length(min=6, max=40)])
+    password = PasswordField('Password',
+                            validators =[DataRequired()])
